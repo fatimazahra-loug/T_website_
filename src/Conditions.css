@@ -1,0 +1,147 @@
+.conditions-container {
+    min-height: 100vh;
+    padding-top: 80px;
+}
+
+/* Hero Section */
+.conditions-hero {
+    background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+    color: white;
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.conditions-hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.conditions-hero-content p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* Contenu principal */
+.conditions-content {
+    padding: 3rem 2rem;
+    background: #f8f9fa;
+    min-height: 100vh;
+}
+
+.conditions-text {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: white;
+    padding: 3rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+}
+
+.last-update {
+    background: #e8f4fc;
+    padding: 1rem;
+    border-left: 4px solid #3498db;
+    margin-bottom: 2rem;
+    border-radius: 5px;
+}
+
+.last-update p {
+    margin: 0;
+    color: #2c3e50;
+    font-weight: 500;
+}
+
+.conditions-article h2 {
+    color: #2c3e50;
+    margin: 2.5rem 0 1rem 0;
+    font-size: 1.5rem;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 0.5rem;
+}
+
+.conditions-article h3 {
+    color: #34495e;
+    margin: 2rem 0 1rem 0;
+    font-size: 1.2rem;
+}
+
+.conditions-article p {
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    color: #555;
+    text-align: justify;
+}
+
+.conditions-article ul {
+    margin: 1rem 0;
+    padding-left: 2rem;
+}
+
+.conditions-article li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+/* Bouton de téléchargement */
+.download-section {
+    text-align: center;
+    margin-top: 3rem;
+    padding: 2rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 10px;
+}
+
+.download-btn-conditions {
+    background: white;
+    color: #667eea;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.download-btn-conditions:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .conditions-content {
+        padding: 2rem 1rem;
+    }
+    
+    .conditions-text {
+        padding: 2rem 1.5rem;
+    }
+    
+    .conditions-hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .conditions-article h2 {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .conditions-text {
+        padding: 1.5rem 1rem;
+    }
+    
+    .download-btn-conditions {
+        padding: 12px 24px;
+        font-size: 1rem;
+    }
+}
+
+/* Pour la lisibilité sur grand écran */
+@media (min-width: 1200px) {
+    .conditions-text {
+        padding: 4rem;
+    }
+}
