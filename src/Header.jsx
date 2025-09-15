@@ -1,27 +1,53 @@
-import { Link } from 'react-router-dom'; // Importez Link
-import logo from './assets/logo .png';
+import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import logo from './assets/logoo.jpg';
+import './index.css'; // Assurez-vous d'importer le CSS
 
 function Header() {
-    return (
-       <nav>
-        <div className="logo">
-            <img src={logo} alt="logo" />
-            <span className="title">TECASER</span>
-            <span className="subtext">Technical and Administrative Services</span>
-        </div>
-        <div className="menu">
+  const [isDropdownOpen, setDropdownOpen] = useState(false);
+
+  return (
+    <nav>
+      <div className="logo">
+        <img src={logo} alt="logo" />
+        <span className="subtext">Technical and Administrative Services</span>
+      </div>
+      <div className="menu">
         <ul>
           <li><Link to="/">Accueil</Link></li>       
-          <li> 
-          <Link to="/prestations">Prestations</Link>
+          <li 
+            className="dropdown"
+            onMouseEnter={() => setDropdownOpen(true)}
+            onMouseLeave={() => setDropdownOpen(false)}
+          >
+            <Link 
+              to="/" 
+              onClick={(e) => {
+                if (window.innerWidth <= 768) {
+                  e.preventDefault();
+                  setDropdownOpen(!isDropdownOpen);
+                }
+              }}
+            >
+              Prestations
+            </Link>
+            <div className={`dropdown-content ${isDropdownOpen ? 'show' : ''}`}>
+              <Link to="/prestations/management">Management-Coordination</Link>
+              <Link to="/prestations/traduction">Traduction Professionnelle</Link>
+          
+                <Link to="/prestations/formation">Formation Technique</Link>
+             
+              <Link to="/prestations/redaction">Rédaction - Review</Link>
+              <Link to="/prestations/autres">Autres</Link>
+            </div>
           </li> 
           <li><Link to="/contact">Contact</Link></li>   
-          <li><Link to="/about">A propos de nous</Link></li>
-          <li><Link to="/conditions">Conditions générales</Link></li> 
+          <li><Link to="/about">À propos de nous</Link></li>
+          <li><Link to="/conditions">Conditions</Link></li> 
         </ul>
-        </div>
-       </nav>
-    )
+      </div>
+    </nav>
+  );
 }
 
 export default Header;

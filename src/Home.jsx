@@ -64,15 +64,13 @@ function App() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
             >
-              Solutions Techniques et Administratives sur Mesure
-            </motion.h1>
+TECASER : Expertise Internationale & Valeurs Partagées            </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.6 }}
             >
-              Expert-comptable, Secrétariat, Conseil en entreprise, et bien plus pour votre entreprise
-            </motion.p>
+Votre Partenaire Multilingue pour des Solutions Sur Mesure            </motion.p>
             <motion.button 
               className="cta-button"
               whileHover={{ scale: 1.05 }}
@@ -204,47 +202,47 @@ function App() {
 
         {/* Section Statistiques - Animation au scroll seulement */}
         <section className="stats-section">
-          <motion.h2 
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
-            transition={{ duration: 0.6 }}
-          >
-            Notre Impact
-          </motion.h2>
-          <div className="stats-grid">
-            <motion.div 
-              className="stat-item"
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-            >
-              <h3>+50</h3>
-              <p>Clients satisfaits</p>
-            </motion.div>
-            <motion.div 
-              className="stat-item"
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-            >
-              <h3>+100</h3>
-              <p>Projets réalisés</p>
-            </motion.div>
-            <motion.div 
-              className="stat-item"
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.5, delay: 0.5 }}
-            >
-              <h3>5+</h3>
-              <p>Ans d'expérience</p>
-            </motion.div>
-          </div>
-        </section>
+  <motion.h2 
+    initial={{ opacity: 0, y: 50 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true, margin: "-50px" }}
+    transition={{ duration: 0.6 }}
+  >
+    Notre Impact
+  </motion.h2>
+  <div className="stats-container">
+    <motion.div 
+      className="stat-item"
+      initial={{ opacity: 0, scale: 0.8 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      viewport={{ once: true, margin: "-50px" }}
+      transition={{ duration: 0.5, delay: 0.1 }}
+    >
+      <h3>+50</h3>
+      <p>Clients satisfaits</p>
+    </motion.div>
+    <motion.div 
+      className="stat-item"
+      initial={{ opacity: 0, scale: 0.8 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      viewport={{ once: true, margin: "-50px" }}
+      transition={{ duration: 0.5, delay: 0.3 }}
+    >
+      <h3>+100</h3>
+      <p>Projets réalisés</p>
+    </motion.div>
+    <motion.div 
+      className="stat-item"
+      initial={{ opacity: 0, scale: 0.8 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      viewport={{ once: true, margin: "-50px" }}
+      transition={{ duration: 0.5, delay: 0.5 }}
+    >
+      <h3>5+</h3>
+      <p>Ans d'expérience</p>
+    </motion.div>
+  </div>
+</section>
       </main>
 
      

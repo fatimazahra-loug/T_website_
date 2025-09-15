@@ -1,0 +1,434 @@
+.management-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  .management-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .management-header h1 {
+    font-size: 2.5rem;
+    color: #333;
+    font-weight: 700;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding-bottom: 0.5rem;
+  }
+  
+  .management-content {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+  
+  .management-section {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: left; /* Override any inherited right alignment */
+  }
+  
+  .management-section h2 {
+    color: #667eea;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #f0f0f0;
+  }
+  
+  .management-section h3 {
+    color: #555;
+    font-size: 1.3rem;
+    margin: 1.5rem 0 1rem 0;
+  }
+  
+  /* Features Grid */
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+  }
+  
+  .feature-card {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  .feature-card h3 {
+    color: #667eea;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Limitations List */
+  .limitations-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin: 1rem 0;
+  }
+  
+  .limitation-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border-radius: 6px;
+    font-weight: 500;
+  }
+  
+  .limitation-icon {
+    font-size: 1.2rem;
+  }
+  
+  /* Definition Card */
+  .definition-card {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    margin: 1.5rem 0;
+  }
+  
+  .quote {
+    font-style: italic;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+  
+  .source {
+    text-align: right;
+    font-weight: 500;
+    opacity: 0.9;
+  }
+  
+  .translation {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-left: 4px solid #667eea;
+    margin: 1.5rem 0;
+    font-style: italic;
+  }
+  
+  /* Stats Grid */
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+  }
+  
+  .stat-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border: 2px solid #667eea;
+  }
+  
+  .stat-number {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #667eea;
+    margin-bottom: 0.5rem;
+  }
+  
+  .stat-label {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+  }
+  
+  .stat-source {
+    font-size: 0.9rem;
+    color: #888;
+    font-style: italic;
+  }
+  
+  /* Factors List */
+  .factors {
+    background-color: #fff8f8;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid #ff6b6b;
+  }
+  
+  .factors h3 {
+    color: #ff6b6b;
+    margin-top: 0;
+  }
+  
+  .factors ul {
+    columns: 2;
+    gap: 2rem;
+  }
+  
+  .factors li {
+    margin-bottom: 0.5rem;
+    padding-left: 0.5rem;
+    break-inside: avoid;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .management-page {
+      padding: 1rem;
+    }
+    
+    .features-grid,
+    .limitations-list,
+    .stats-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .factors ul {
+      columns: 1;
+    }
+    
+    .management-section {
+      padding: 1.5rem;
+    }
+    
+    .management-header h1 {
+      font-size: 2rem;
+    }
+  }
+
+
+
+
+/* ... (ajoutez à la fin du fichier ManagementCoordination.css) */
+
+/* Notre Approche */
+.approach-content {
+  line-height: 1.6;
+}
+
+.intro {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.smart-approach {
+  background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin: 1.5rem 0;
+  border-left: 4px solid #1976d2;
+}
+
+.smart-approach h3 {
+  color: #1976d2;
+  margin-top: 0;
+}
+
+.philosophy {
+  margin: 2rem 0;
+}
+
+.philosophy-card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.quote-large {
+  font-size: 1.3rem;
+  font-style: italic;
+  font-weight: 500;
+  margin: 0;
+}
+
+/* Process Steps */
+
+.process-steps {
+  margin: 2rem 0;
+  padding-left: 0; /* Remove default padding */
+  text-align: left; /* Explicitly set left alignment */
+}
+
+.process-steps h3 {
+  margin-bottom: 1rem;
+  color: #333;
+  margin: 30px;
+}
+
+.process-list {
+  list-style-type: none; /* Remove default bullets */
+  padding-left: 0; /* Remove default padding */
+  text-align: left; /* Ensure left alignment */
+}
+
+.process-list li {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6; /* Improve readability */
+  margin-bottom: 1rem; /* Space between items */
+  padding-left: 1.5rem; /* Indent for custom bullet */
+  position: relative; /* For custom numbering */
+  display: block; /* Ensure each li is a block to prevent inline issues */
+}
+
+.process-list li:before {
+  content: counter(item) "."; /* Custom numbering */
+  counter-increment: item; /* Increment counter */
+  color: #667eea; /* Match your theme color */
+  font-weight: bold;
+  position: absolute;
+  left: 0; /* Ensure numbering starts at the left edge */
+}
+
+.process-list {
+  counter-reset: item; /* Reset counter for the list */
+}
+
+
+
+/* Domaines d'Expertise */
+.expertise-domain {
+  margin-bottom: 2rem;
+}
+
+.domain-header h3 {
+  color: #2c5530;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.domain-content {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+.expertise-list {
+  columns: 2;
+  gap: 2rem;
+}
+
+.expertise-list li {
+  margin-bottom: 0.5rem;
+  padding-left: 0.5rem;
+  break-inside: avoid;
+}
+
+.separator-large {
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #667eea, transparent);
+  margin: 2rem 0;
+}
+
+/* Application Grid */
+.application-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.application-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.app-icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.agv-services {
+  margin-top: 1.5rem;
+}
+
+.agv-services h4 {
+  color: #2c5530;
+  margin-bottom: 1rem;
+}
+
+.agv-services ul {
+  columns: 2;
+  gap: 2rem;
+}
+
+.agv-services li {
+  margin-bottom: 0.5rem;
+  break-inside: avoid;
+}
+
+/* CTA Section */
+.cta-section {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 3rem 2rem;
+  border-radius: 10px;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.cta-content h2 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.cta-button {
+  background: white;
+  color: #667eea;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-top: 1rem;
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .steps-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .expertise-list,
+  .agv-services ul {
+    columns: 1;
+  }
+  
+  .application-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .quote-large {
+    font-size: 1.1rem;
+  }
+  
+  .cta-content h2 {
+    font-size: 1.5rem;
+  }
+}

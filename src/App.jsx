@@ -6,6 +6,11 @@ import About from './About';
 import Conditions from './Conditions';
 import './App.css';
 import Contact from './Contact';
+import ManagementCoordination from './ManagementCoordination';
+import Traduction from './Traduction';
+import RedactionReview from './RedactionReview';
+import Formation from './Formation';
+import Autres from './Autres';
 
 function App() {
   return (
@@ -20,9 +25,12 @@ function App() {
         <Route path="/about" element={<About />} />
 
         <Route path="/conditions" element={<Conditions />} />
-
-        {/* <Route path="/prestations" element={<Prestations />} /> */}
          <Route path="/contact" element={<Contact />} /> 
+         <Route path="/prestations/management" element={<ManagementCoordination />} />
+         <Route path="/prestations/traduction" element={<Traduction />} />
+         <Route path="/prestations/formation" element={<Formation />} />
+         <Route path="/prestations/redaction" element={<RedactionReview />} />
+         <Route path="/prestations/autres" element={<Autres />} />
       </Routes>
       
       <Footer />

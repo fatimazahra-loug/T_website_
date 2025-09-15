@@ -1,0 +1,240 @@
+.autres-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  .autres-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .autres-header h1 {
+    font-size: 2.5rem;
+    color: #333;
+    font-weight: 700;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0.5rem;
+  }
+  
+  .autres-subtitle {
+    font-size: 1.2rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .autres-content {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+  
+  /* Section Introduction */
+  .autres-intro {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  .autres-intro h2 {
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  .intro-text {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  /* Section Services */
+  .services-section {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  .service-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid #667eea;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .service-icon {
+    font-size: 2.5rem;
+    flex-shrink: 0;
+  }
+  
+  .service-content h3 {
+    color: #333;
+    margin-bottom: 0.8rem;
+    font-size: 1.2rem;
+  }
+  
+  .service-content p {
+    color: #666;
+    line-height: 1.5;
+    margin: 0;
+  }
+  
+  /* Section Points Suspensifs */
+  .suspensifs-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  .suspensifs-content h3 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+  
+  .suspensifs-content p {
+    opacity: 0.9;
+    margin-bottom: 1.5rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .suspensifs-dots {
+    font-size: 3rem;
+    font-weight: bold;
+    opacity: 0.7;
+  }
+  
+  /* Section CTA */
+  .autres-cta {
+    background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+    color: white;
+    padding: 3rem 2rem;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  .cta-content h2 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+  }
+  
+  .cta-content p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .cta-button {
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .cta-button.primary {
+    background: white;
+    color: #4CAF50;
+  }
+  
+  .cta-button.secondary {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+  }
+  
+  .cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .autres-page {
+      padding: 1rem;
+    }
+    
+    .services-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .service-card {
+      flex-direction: column;
+      text-align: center;
+      gap: 1rem;
+    }
+    
+    .cta-buttons {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .cta-button {
+      width: 100%;
+      max-width: 300px;
+    }
+    
+    .autres-header h1 {
+      font-size: 2rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .autres-intro,
+    .services-section,
+    .suspensifs-section {
+      padding: 1.5rem;
+    }
+    
+    .service-card {
+      padding: 1rem;
+    }
+    
+    .service-icon {
+      font-size: 2rem;
+    }
+    
+    .cta-content h2 {
+      font-size: 1.5rem;
+    }
+    
+    .suspensifs-dots {
+      font-size: 2.5rem;
+    }
+  }

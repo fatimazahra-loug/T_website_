@@ -12,7 +12,7 @@ nav {
   align-items: center;
   padding: 1rem 2rem;
   background-color: #ffffff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow for depth */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   width: 100%;
 }
 
@@ -24,7 +24,7 @@ nav {
 }
 
 .logo img {
-  max-width: 80px; /* Adjust based on your logo size */
+  max-width: 120px;
   height: auto;
 }
 
@@ -46,7 +46,7 @@ nav {
   list-style: none;
   display: flex;
   align-items: center;
-  gap: 1.5rem; /* Space between menu items */
+  gap: 1.5rem;
 }
 
 .menu ul li a {
@@ -55,22 +55,130 @@ nav {
   font-size: 1.2rem;
   padding: 0.5rem 0;
   transition: color 0.3s ease;
-  font-weight:600;
+  font-weight: 600;
   font-family: 'Times New Roman', Times;
 }
 
 .menu ul li a:hover {
-  color: #ff0000; /* Red hover effect like "Accueil" */
+  color: #ff0000;
 }
 
 /* Specific styling for "Accueil" to match red color */
 .menu ul li:first-child a {
-  color: #ff0000; /* Red color for "Accueil" */
+  color: #ff0000;
 }
 
-/* Optional: Add a subtle separator between items (adjust as needed) */
+/* Optional: Add a subtle separator between items */
 .menu ul li:not(:last-child)::after {
-  content: "·"; /* Dot separator */
+  content: "·";
   margin-left: 1.5rem;
   color: #ccc;
+}
+
+/* Styles pour le menu déroulant */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  min-width: 100px;
+  box-shadow: 0 8px 8px rgba(0,0,0,0.1);
+  border-radius: 4px;
+  padding: 0.5rem 0;
+  z-index: 1000;
+}
+
+.dropdown-content a {
+  padding: 0.5rem 1.5rem;
+  color: #333;
+  white-space: nowrap;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f5f5f5;
+  color: #667eea;
+}
+
+.dropdown:hover .dropdown-content,
+.dropdown-content.show {
+  display: block;
+}
+
+/* Sub-dropdown styling */
+.dropdown-sub {
+  position: relative;
+}
+
+.dropdown-sub-content {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background-color: white;
+  min-width: 100px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  border-radius: 4px;
+  padding: 0.5rem 0;
+  z-index: 1000;
+}
+
+.dropdown-sub:hover .dropdown-sub-content {
+  display: block;
+}
+
+.dropdown-sub-title {
+  padding: 0.8rem 1.5rem;
+  display: block;
+  color: #333;
+}
+
+.dropdown-sub-title:hover {
+  background-color: #f5f5f5;
+  color: #667eea;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    padding: 1rem;
+  }
+  
+  .menu ul {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .menu li {
+    margin: 0.5rem 0;
+    width: 100%;
+  }
+  
+  .dropdown-content {
+    position: static;
+    box-shadow: none;
+    display: none;
+    width: 100%;
+  }
+  
+  .dropdown:hover .dropdown-content,
+  .dropdown-content.show {
+    display: block;
+  }
+  
+  .dropdown-sub-content {
+    position: static;
+    box-shadow: none;
+    width: 100%;
+  }
+  
+  .dropdown-sub:hover .dropdown-sub-content {
+    display: block;
+  }
 }

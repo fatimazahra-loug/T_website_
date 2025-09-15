@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './Contact.css';
+import emailjs from '@emailjs/browser';
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -19,16 +20,29 @@ function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Ici vous ajouterez la logique pour envoyer le formulaire
-    console.log('Formulaire envoyé:', formData);
-    alert('Merci pour votre message! Nous vous répondrons bientôt.');
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      subject: '',
-      message: ''
-    });
+
+    emailjs.init('g2jP-NOML4Zb6kaSK'); 
+
+    emailjs.send('service_0xbbyyo', 'template_nje916c', { 
+      name: formData.name,
+      email: formData.email,
+      phone: formData.phone,
+      message: formData.message
+    })
+      .then((response) => {
+        console.log('Email sent successfully:', response.status, response.text);
+        alert('Merci pour votre message! Nous vous répondrons bientôt.');
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          message: ''
+        });
+      })
+      .catch((error) => {
+        console.error('Failed to send email:', error);
+        alert('Une erreur est survenue. Veuillez réessayer.');
+      });
   };
 
   return (
