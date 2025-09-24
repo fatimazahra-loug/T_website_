@@ -110,9 +110,9 @@ Votre Partenaire Multilingue pour des Solutions Sur Mesure            </motion.p
                 whileHover={{ color: "#667eea" }}
                 transition={{ duration: 0.3 }}
               >
-                Expertise Comptable
+                Intégration Industrielle
               </motion.h3>
-              <p>Gestion complète de votre comptabilité avec des experts dédiés.</p>
+              <p>Optimisation de vos processus industriels avec des experts dédiés.</p>
             </motion.div>
 
             {/* Deuxième boîte */}

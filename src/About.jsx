@@ -77,7 +77,7 @@ Nous estimons que nos collaborateurs/clients ont le droit à un travail de quali
                 </div>
             </section>
 
-            {/* Section Statistiques */}
+            {/* Section Statistiques
             <motion.section 
                 className="about-stats"
                 initial="hidden"
@@ -119,7 +119,7 @@ Nous estimons que nos collaborateurs/clients ont le droit à un travail de quali
                         <p>Projets réalisés</p>
                     </motion.div>
                 </div>
-            </motion.section>
+            </motion.section> */}
         </div>
     );
 }

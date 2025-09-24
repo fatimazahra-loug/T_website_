@@ -11,7 +11,7 @@ function RedactionReview() {
   return (
     <div className="redaction-page">
       <div className="redaction-header">
-        <h1>Rédaction & Review</h1>
+        <h1>Intégration Industrielle</h1>
         <p className="redaction-subtitle">
           Service professionnel de rédaction, correction et mise en forme de documents
         </p>

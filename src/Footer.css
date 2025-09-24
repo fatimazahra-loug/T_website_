@@ -22,7 +22,13 @@
 
 .footer-section {
     text-align: center;
+    
 }
+
+#res{
+    margin-top:45px;
+}
+
 
 .footer-section h3 {
     color: #3498db;
@@ -40,7 +46,9 @@
     color: #ecf0f1;
     text-decoration: none;
     transition: color 0.3s ease;
+   
 }
+
 
 .contact-info a:hover {
     color: #3498db;

@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import logo from './assets/logoo.jpg';
-import './index.css'; // Assurez-vous d'importer le CSS
+import './index.css'; //  <span className="subtext">Technical and Administrative Services</span>
 
 function Header() {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
@@ -10,7 +10,7 @@ function Header() {
     <nav>
       <div className="logo">
         <img src={logo} alt="logo" />
-        <span className="subtext">Technical and Administrative Services</span>
+    
       </div>
       <div className="menu">
         <ul>
@@ -31,13 +31,14 @@ function Header() {
             >
               Prestations
             </Link>
-            <div className={`dropdown-content ${isDropdownOpen ? 'show' : ''}`}>
-              <Link to="/prestations/management">Management-Coordination</Link>
-              <Link to="/prestations/traduction">Traduction Professionnelle</Link>
+            <div className={`dropdown-content ${isDropdownOpen ? 'show' : ''}`} id="pres">
+              <Link to="/prestations/management">Management -<br />Coordination</Link>
+              <Link to="/prestations/redaction">Intégration <br />Industrielle</Link>
+              <Link to="/prestations/traduction">Traduction<br /> Professionnelle</Link>
           
-                <Link to="/prestations/formation">Formation Technique</Link>
+                <Link to="/prestations/formation">Formation <br />Technique</Link>
              
-              <Link to="/prestations/redaction">Rédaction - Review</Link>
+              
               <Link to="/prestations/autres">Autres</Link>
             </div>
           </li> 
