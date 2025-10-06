@@ -12,6 +12,10 @@ i18n
     debug: true,
     fallbackLng: 'fr',
     interpolation: { escapeValue: false },
+    react: {
+      transSupportBasicHtmlNodes: true,
+      transKeepBasicHtmlNodesFor: ['br', 'strong', 'i'],  
+    },
     resources: {
       en: { translation: en.translation || en }, 
       de: { translation: de.translation || de },

@@ -3,7 +3,7 @@ import { useState } from 'react';
 import logo from './assets/l.png';
 import './index.css'; //  <span className="subtext">Technical and Administrative Services</span>
 import LanguageSelector from '/src/components/language-selector.jsx';
-import { useTranslation } from 'react-i18next';
+import {Trans, useTranslation } from 'react-i18next';
 
 function Header() {
   const  { t}= useTranslation();
@@ -36,12 +36,22 @@ function Header() {
               {t('prestations',{ defaultValue: 'Prestations' })}
             </Link>
             <div className={`dropdown-content ${isDropdownOpen ? 'show' : ''}`} id="pres">
-              <Link to="/prestations/management">{t('management',{ defaultValue: 'Management - Coordination' })}</Link>
-              <Link to="/prestations/integration">{t('integration',{ defaultValue: 'Intégration Industrielle' })}</Link>
-              <Link to="/prestations/traduction">{t('traduction',{ defaultValue: 'Traduction Professionnelle' })}</Link>
-              <Link to="/prestations/formation">{t('formation',{ defaultValue: 'Formation Technique' })}</Link>
-              <Link to="/prestations/autres">{t('autres',{ defaultValue: 'Autres' })}</Link>
-            </div>
+            <Link to="/prestations/management">
+    <Trans i18nKey="management" defaults="Management <br/> Coordination" />
+  </Link>
+  <Link to="/prestations/integration">
+    <Trans i18nKey="integration" defaults="Intégration <br/> Industrielle" />
+  </Link>
+  <Link to="/prestations/traduction">
+    <Trans i18nKey="traduction" defaults="Traduction <br/> Professionnelle" />
+  </Link>
+  <Link to="/prestations/formation">
+    <Trans i18nKey="formation" defaults="Formation <br/> Technique" />
+  </Link>
+  <Link to="/prestations/autres">
+    <Trans i18nKey="autres" defaults="Autres" />
+  </Link>
+  </div>
           </li>
           <li><Link to="/contact">{t('contact',{ defaultValue: 'Contact' })}</Link></li>
           <li><Link to="/about">{t('about',{ defaultValue: 'A propos de nous' })}</Link></li>
