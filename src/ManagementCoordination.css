@@ -391,8 +391,8 @@
   font-size: 2rem;
 }
 
-.cta-button {
-  background: white;
+#btnn {
+  background-color: white;
   color: #667eea;
   border: none;
   padding: 1rem 2rem;

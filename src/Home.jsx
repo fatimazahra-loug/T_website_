@@ -2,6 +2,8 @@ import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import './App.css';
 
+import LanguageSelector from '/src/components/language-selector.jsx';
+import { useTranslation } from 'react-i18next';
 
 
 // Animations réutilisables
@@ -33,6 +35,7 @@ const scaleIn = {
 };
 
 function App() {
+  const  { t}= useTranslation();
 
   const navigate = useNavigate(); // Initialisez useNavigate
 
@@ -64,13 +67,13 @@ function App() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
             >
-TECASER : Expertise Internationale & Valeurs Partagées            </motion.h1>
+{t("titre",{ defaultValue: 'TECASER : Expertise Internationale & Valeurs Partagées' })}            </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.6 }}
             >
-Votre Partenaire Multilingue pour des Solutions Sur Mesure            </motion.p>
+{t("titre1",{ defaultValue: 'Votre Partenaire Multilingue pour des Solutions Sur Mesure' })}           </motion.p>
             <motion.button 
               className="cta-button"
               whileHover={{ scale: 1.05 }}
@@ -80,7 +83,7 @@ Votre Partenaire Multilingue pour des Solutions Sur Mesure            </motion.p
               transition={{ duration: 0.6, delay: 0.8 }}
               onClick={handleContactClick}
             >
-              Contactez-nous
+              {t("contact_btn",{ defaultValue: 'Contactez-nous' })} 
             </motion.button>
           </motion.div>
         </motion.section>
@@ -161,7 +164,7 @@ Votre Partenaire Multilingue pour des Solutions Sur Mesure            </motion.p
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.6 }}
           >
-            Pourquoi choisir TECASER ?
+            {t("choisir",{ defaultValue: 'Pourquoi choisir TECASER ?' })} 
           </motion.h2>
           
           <div className="advantages-list">
@@ -172,8 +175,8 @@ Votre Partenaire Multilingue pour des Solutions Sur Mesure            </motion.p
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: 0.1 }}
             >
-              <h4>✅ Expertise & Professionnalisme</h4>
-              <p>Une équipe d'experts qualifiés à votre service</p>
+              <h4>✅{t('expertise',{ defaultValue: 'Expertise & Professionnalisme' })}</h4>
+              <p>{t('p',{defaultValue: "Une équipe d'experts qualifiés à votre service"})}</p>
             </motion.div>
 
             <motion.div 
@@ -183,8 +186,8 @@ Votre Partenaire Multilingue pour des Solutions Sur Mesure            </motion.p
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: 0.3 }}
             >
-              <h4>✅ Solutions Sur Mesure</h4>
-              <p>Des services adaptés à vos besoins spécifiques</p>
+              <h4>✅ {t('sol',{defaultValue: 'Solutions Sur Mesure'})}</h4>
+              <p>{t('p1',{defaultValue: 'Des services adaptés à vos besoins spécifiques'})}</p>
             </motion.div>
 
             <motion.div 
@@ -194,8 +197,8 @@ Votre Partenaire Multilingue pour des Solutions Sur Mesure            </motion.p
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: 0.5 }}
             >
-              <h4>✅ Réactivité & Écoute</h4>
-              <p>Une relation de confiance et une communication transparente</p>
+              <h4>✅{t('react',{defaultValue:  'Réactivité & Écoute'})}</h4>
+              <p>{t('p2',{defaultValue:'Une relation de confiance et une communication transparente'})}</p>
             </motion.div>
           </div>
         </section>
@@ -208,7 +211,7 @@ Votre Partenaire Multilingue pour des Solutions Sur Mesure            </motion.p
     viewport={{ once: true, margin: "-50px" }}
     transition={{ duration: 0.6 }}
   >
-    Notre Impact
+    {t('impact', {defaultValue: 'Notre Impact'})}
   </motion.h2>
   <div className="stats-container">
     <motion.div 
@@ -219,7 +222,7 @@ Votre Partenaire Multilingue pour des Solutions Sur Mesure            </motion.p
       transition={{ duration: 0.5, delay: 0.1 }}
     >
       <h3>+50</h3>
-      <p>Clients satisfaits</p>
+      <p>{t('p3',{defaultValue:'Clients satisfaits'})}</p>
     </motion.div>
     <motion.div 
       className="stat-item"
@@ -229,7 +232,7 @@ Votre Partenaire Multilingue pour des Solutions Sur Mesure            </motion.p
       transition={{ duration: 0.5, delay: 0.3 }}
     >
       <h3>+100</h3>
-      <p>Projets réalisés</p>
+      <p>{t('p4',{defaultValue:'Projets réalisés'})}</p>
     </motion.div>
     <motion.div 
       className="stat-item"
@@ -239,7 +242,7 @@ Votre Partenaire Multilingue pour des Solutions Sur Mesure            </motion.p
       transition={{ duration: 0.5, delay: 0.5 }}
     >
       <h3>5+</h3>
-      <p>Ans d'expérience</p>
+      <p>{t('p5',{defaultValue:"Ans d'expérience"})}</p>
     </motion.div>
   </div>
 </section>

@@ -1,9 +1,11 @@
 import { motion } from 'framer-motion';
 import './About.css';
+import { useTranslation } from 'react-i18next';
 // Importez votre image - ajustez le chemin selon votre structure
 import aboutImage from './assets/img.PNG'; 
 
 function About() {
+    const  { t}= useTranslation();
     return (
         <div className="about-container">
             {/* Section Hero */}
@@ -19,15 +21,14 @@ function About() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.2 }}
                     >
-                        À Propos de TECASER
+                        {t('aboutt',{defaultValue:'À Propos de TECASER'})}
                     </motion.h1>
                     <motion.p
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.4 }}
                     >
-                        Votre partenaire de confiance pour les services techniques et administratifs
-                    </motion.p>
+                        {t('p7',{defaultValue:'Votre partenaire de confiance pour les services techniques et administratifs'})}                    </motion.p>
                 </div>
             </motion.section>
 
@@ -57,20 +58,20 @@ function About() {
                         viewport={{ once: true, margin: "-50px" }}
                         transition={{ duration: 0.6, delay: 0.2 }}
                     >
-                        <h2>Notre Histoire</h2>
+                        <h2>{t('histoire',{defaultValue:'Notre Histoire'})}</h2>
                         <p>
-                        TECASER (Technical and Administrative Services) a été créée en Mars 2023 en s’appuyant sur une équipe de collaborateurs riches d’une dizaine d’années d’expérience dans plusieurs pays européens (Belgique, Allemagne, Suisse, Autriche, France, Italie) et dans des domaines différents (Ferroviaire, Véhicules auto-guidés-AGV, Métallurgie), et partageant la même vision de travail et les mêmes valeurs professionnelles et interpersonnelles.
+                        {t('p8',{defaultValue:"TECASER (Technical and Administrative Services) a été créée en Mars 2023 en s’appuyant sur une équipe de collaborateurs riches d’une dizaine d’années d’expérience dans plusieurs pays européens (Belgique, Allemagne, Suisse, Autriche, France, Italie) et dans des domaines différents (Ferroviaire, Véhicules auto-guidés-AGV, Métallurgie), et partageant la même vision de travail et les mêmes valeurs professionnelles et interpersonnelles."})}
                         </p>
 
 
                         <div className="about-values">
-                            <h3>Nos Valeurs</h3>
+                            <h3>{t('values',{defaultValue:'Nos Valeurs'})}</h3>
                             <p>
-                            Dans un monde où les clients et les partenaires deviennent de plus en plus exigeants en ce qui concerne la qualité et les délais de livraison, TECASER se positionne en tant que partenaire international de services techniques (Management de projets, Coordination, Consulting et Formation) et administratifs (Traductions professionnelles) fournis dans quarte différentes langues (Français, Anglais, Allemand, et Arabe).
-
-Notre vision de services se veut révolutionnaire dans le sens où elle répond à des besoins réels, spécifiques et bien ciblés d’entreprises et de personnes dans le monde entier.
-
-Nous estimons que nos collaborateurs/clients ont le droit à un travail de qualité. En nous confiant des tâches d’assistance ou de gestion, nous permettons à nos collaborateurs de se focaliser sur des tâches plus spéciales au sein de leurs entreprises.
+                            {t('p9', {
+  defaultValue: `Dans un monde où les clients et les partenaires deviennent de plus en plus exigeants en ce qui concerne la qualité et les délais de livraison, TECASER se positionne en tant que partenaire international de services techniques (Management de projets, Coordination, Consulting et Formation) et administratifs (Traductions professionnelles) fournis dans quatre différentes langues (Français, Anglais, Allemand, et Arabe).
+  Notre vision de services se veut révolutionnaire dans le sens où elle répond à des besoins réels, spécifiques et bien ciblés d’entreprises et de personnes dans le monde entier.
+  Nous estimons que nos collaborateurs/clients ont le droit à un travail de qualité. En nous confiant des tâches d’assistance ou de gestion, nous permettons à nos collaborateurs de se focaliser sur des tâches plus spéciales au sein de leurs entreprises.`
+})}
                             </p>
                         </div>
                     </motion.div>

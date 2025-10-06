@@ -2,8 +2,10 @@ import { useState, useRef } from 'react';
 import ReCAPTCHA from 'react-google-recaptcha';
 import './Contact.css';
 import emailjs from '@emailjs/browser';
+import { useTranslation } from 'react-i18next';
 
 function Contact() {
+  const  { t}= useTranslation();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -86,8 +88,8 @@ function Contact() {
       {/* En-tête de la page */}
       <div className="contact-header">
         <div className="container">
-          <h1>Contactez-nous</h1>
-          <p>Nous sommes à votre écoute pour répondre à toutes vos questions</p>
+          <h1>{t('contact',{defaultValue:'Contactez-nous'})}</h1>
+          <p>{t('p6',{defaultValue:'Nous sommes à votre écoute pour répondre à toutes vos questions'})}</p>
         </div>
       </div>
 
@@ -97,11 +99,11 @@ function Contact() {
 
         {/* Formulaire de contact */}
         <div className="contact-form-container">
-          <h2>Envoyez-nous un message</h2>
+          <h2>{t('msg',{defaultValue:'Envoyez-nous un message'})}</h2>
           <form className="contact-form" onSubmit={handleSubmit}>
             <div className="form-row">
               <div className="form-group">
-                <label htmlFor="name">Nom complet *</label>
+                <label htmlFor="name">{t('nom',{defaultValue:'Nom complet'})} *</label>
                 <input
                   type="text"
                   id="name"
@@ -112,7 +114,7 @@ function Contact() {
                 />
               </div>
               <div className="form-group">
-                <label htmlFor="email">Email *</label>
+                <label htmlFor="email">{t('email',{defaultValue:'Email'})} *</label>
                 <input
                   type="email"
                   id="email"
@@ -126,7 +128,7 @@ function Contact() {
 
             <div className="form-row">
               <div className="form-group">
-                <label htmlFor="phone">Téléphone</label>
+                <label htmlFor="phone">{t('tel',{defaultValue:'Téléphone'})}</label>
                 <input
                   type="tel"
                   id="phone"
@@ -138,7 +140,7 @@ function Contact() {
             </div>
 
             <div className="form-group">
-              <label htmlFor="message">Message *</label>
+              <label htmlFor="message">{t('message',{defaultValue:'Message'})} *</label>
               <textarea
                 id="message"
                 name="message"
@@ -157,7 +159,7 @@ function Contact() {
               />
             </div>
 
-            <button type="submit" className="submit-btn">Envoyer le message</button>
+            <button type="submit" className="submit-btn">{t('btn',{defaultValue:'Envoyer le message'})}</button>
           </form>
         </div>
       </div>

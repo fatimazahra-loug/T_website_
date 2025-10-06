@@ -1,9 +1,13 @@
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
-import logo from './assets/logoo.jpg';
+import logo from './assets/l.png';
 import './index.css'; //  <span className="subtext">Technical and Administrative Services</span>
+import LanguageSelector from '/src/components/language-selector.jsx';
+import { useTranslation } from 'react-i18next';
 
 function Header() {
+  const  { t}= useTranslation();
+
   const [isDropdownOpen, setDropdownOpen] = useState(false);
 
   return (
@@ -14,7 +18,7 @@ function Header() {
       </div>
       <div className="menu">
         <ul>
-          <li><Link to="/">Accueil</Link></li>       
+          <li><Link to="/">{t("acc", { defaultValue: 'Accueil' })}</Link></li>       
           <li 
             className="dropdown"
             onMouseEnter={() => setDropdownOpen(true)}
@@ -29,22 +33,20 @@ function Header() {
                 }
               }}
             >
-              Prestations
+              {t('prestations',{ defaultValue: 'Prestations' })}
             </Link>
             <div className={`dropdown-content ${isDropdownOpen ? 'show' : ''}`} id="pres">
-              <Link to="/prestations/management">Management -<br />Coordination</Link>
-              <Link to="/prestations/redaction">Intégration <br />Industrielle</Link>
-              <Link to="/prestations/traduction">Traduction<br /> Professionnelle</Link>
-          
-                <Link to="/prestations/formation">Formation <br />Technique</Link>
-             
-              
-              <Link to="/prestations/autres">Autres</Link>
+              <Link to="/prestations/management">{t('management',{ defaultValue: 'Management - Coordination' })}</Link>
+              <Link to="/prestations/integration">{t('integration',{ defaultValue: 'Intégration Industrielle' })}</Link>
+              <Link to="/prestations/traduction">{t('traduction',{ defaultValue: 'Traduction Professionnelle' })}</Link>
+              <Link to="/prestations/formation">{t('formation',{ defaultValue: 'Formation Technique' })}</Link>
+              <Link to="/prestations/autres">{t('autres',{ defaultValue: 'Autres' })}</Link>
             </div>
-          </li> 
-          <li><Link to="/contact">Contact</Link></li>   
-          <li><Link to="/about">À propos de nous</Link></li>
-          <li><Link to="/conditions">Conditions</Link></li> 
+          </li>
+          <li><Link to="/contact">{t('contact',{ defaultValue: 'Contact' })}</Link></li>
+          <li><Link to="/about">{t('about',{ defaultValue: 'A propos de nous' })}</Link></li>
+          <li><Link to="/conditions">{t('conditions',{ defaultValue: 'Conditions  ' })}</Link></li> 
+          <li><LanguageSelector /></li>
         </ul>
       </div>
     </nav>

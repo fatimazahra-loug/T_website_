@@ -1,0 +1,45 @@
+.language-selector {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .earth-icon {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    vertical-align: middle;
+  }
+  
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 120%;
+    left: -30px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    min-width: 80px;
+  }
+  
+  .dropdown-menu.show {
+    display: block;
+  }
+  
+  .dropdown-item {
+    padding: 5px 8px 8px 8px;
+    cursor: pointer;
+    color: #333;
+  }
+  
+  .dropdown-item:hover {
+    color:#667eea;
+    background-color:aliceblue;
+  }
+  
+  /* RTL support for Arabic (if added later) */
+  [dir='rtl'] .dropdown-menu {
+    right: auto;
+    left: 0;
+  }

@@ -1,16 +1,18 @@
 import { Routes, Route } from 'react-router-dom';
 import Header from './Header';
 import Footer from './Footer';
-import Home from './Home'; // Importez le nouveau composant Home
+import Home from './Home';
 import About from './About';
 import Conditions from './Conditions';
 import './App.css';
 import Contact from './Contact';
 import ManagementCoordination from './ManagementCoordination';
 import Traduction from './Traduction';
-import RedactionReview from './RedactionReview';
+import IntegrationIdustrielle from './IntegrationIdustrielle';
 import Formation from './Formation';
 import Autres from './Autres';
+
+import './i18.js';
 
 function App() {
   return (
@@ -29,7 +31,7 @@ function App() {
          <Route path="/prestations/management" element={<ManagementCoordination />} />
          <Route path="/prestations/traduction" element={<Traduction />} />
          <Route path="/prestations/formation" element={<Formation />} />
-         <Route path="/prestations/redaction" element={<RedactionReview />} />
+         <Route path="/prestations/integration" element={<IntegrationIdustrielle />} />
          <Route path="/prestations/autres" element={<Autres />} />
       </Routes>
       

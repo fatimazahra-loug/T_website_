@@ -1,6 +1,8 @@
 import './Footer.css';
+import { useTranslation } from 'react-i18next';
 
 function Footer() {
+    const  { t}= useTranslation();
     return (
         <footer className="footer">
             {/* Section supérieure - 3 colonnes */}
@@ -15,8 +17,8 @@ function Footer() {
                                 +212 6 67 08 56 72
                             </p>
                             <p>
-                                <strong>Email :</strong><br />
-                                <a href="mailto:contact@teca-ser.com">contact@teca-ser.com</a>
+                                <strong>{t('email',{defaultValue:'Email'})} :</strong><br />
+                                <a href="mailto: info@teca-ser.com">info@teca-ser.com</a>
                             </p>
                         </div>
                     </div>
@@ -26,7 +28,7 @@ function Footer() {
                       
                         <div className="contact-info">
                             <p>
-                                <strong>Site web :</strong><br />
+                                <strong>{t('website',{defaultValue:'Site web'})}:</strong><br />
                                 <a href="https://www.teca-ser.com" target="_blank" rel="noopener noreferrer">
                                     www.teca-ser.com
                                 </a>
@@ -42,7 +44,7 @@ function Footer() {
 
                     {/* Section Carte - Remplace les infos fiscales */}
                     <div className="footer-section">
-                        <h3>Localisation</h3>
+                        <h3>{t('localisation',{defaultValue:'Localisation'})}</h3>
                         
                         <div className="location-info-inline">
                             <p><strong>📍 15 Centre d'Affaires, Av. Hassan II, Kénitra 14000</strong></p>
@@ -53,7 +55,7 @@ function Footer() {
 
             {/* Copyright */}
             <div className="footer-copyright">
-                <p>&copy; 2025 TECASER - Tous droits réservés</p>
+                <p>&copy; 2025 TECASER - {t('droit',{defaultValue:'Tous droits réservés'})}</p>
             </div>
         </footer>
     );
